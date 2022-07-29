@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bilingual</title>
+   <!-- Latest compiled and minified CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+   <div id="google_translate_element"></div>
+	
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'},
+				'google_translate_element'
+			);
+		}
+	</script>
+	
+	<script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+	</script>
+   <div class="col-md-12" id="divRoles">
+      <div class="main-card mb-3 card" id="divPersonal">
+      <div class="card-body">
+      
+      
+            
+           
+         <div id="ideator1">
+            <h5 class="card-title" style="color:red">Add Ideator Details</h5>
+            <br>
+           
+            <div class="form-row">
+               <div class="col-md-4 mb-3"> 
+                  <label class="control-label "><b>Name</b><span style="color:red;"> *</span>(As per your elementary school certificate)</label>
+                  <input name="ideator_name" id="ideator_name" placeholder="Type Name" type="text" class="form-control" value="">
+               </div>
+               <div class="col-md-4 mb-3">
+                  <label  class="control-label "><b>Email</b></label>
+                  <input name="ideator_email" id="ideator_email" placeholder="Type Email ID" type="email" class="form-control" value="" disabled>
+               </div>
+               <div class="col-md-4 mb-3">
+                  <label  class="control-label "><b>Mobile</b></label>
+                  <input name="ideator_mobile" id="ideator_mobile" placeholder="Type Email ID" type="email" class="form-control" value="" disabled>
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="col-md-4 mb-3">
+                  <label for="name" class="control-label "><b>Gender</b><span style="color:red;"> *</span></label>
+               </div>
+               <div class="col-md-4 mb-3"> 
+                  <label for="name" class="control-label "><b>DOB</b><span style="color:red;"> *</span></label>
+                  <input type="date" class="form-control" id="ideator_dob" name="ideator_dob" placeholder="DOB" max="<?php echo date('2010-12-30'); ?>" value=""> 
+               </div>
+               <div class="col-md-4 mb-3">
+                  <label for="name" class="control-label "><b>Category</b><span style="color:red;"> *</span></label>
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="col-md-4 mb-3">
+                  <label for="name" class="control-label "><b>Year/Sem/Class</b><span style="color:red;"> *</span></label>
+                  
+               </div>
+               <div class="col-md-4 mb-3">
+                  <label for="name" class="control-label "><b>Department/Division</b><span style="color:red;"> *</span></label>
+                  <select name="" class="form-control">
+                     <option value="0">Physics</option>
+                     <option value="0">Chemistry</option>
+                     <option value="0">Malayalam</option>
+                     <option value="0">Arabic</option>
+                  </select>
+               </div>
+               <div class="col-md-4 mb-3">
+                  <label for="aadhaar"><b>Type of Proof</b><span style="color:red;"> *</span></label>
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="col-md-2 ">
+                  <label id="aadh_up_new1" for="aadh_up"><b>Id Card Upload</b><span style="color:red;"> *</span></label><br/>
+                  <button  id="ideator_aadhaar_file1"   TextboxId="IDcard"  title="Add Mark" type="button"    data-toggle="modal" data-target="#file_up_modal"class="btn-shadow mr-3 btn btn-info ideator_aadhaar_file1 file_up_modal">
+                  <i class="fa fa-upload"></i>
+                  </button>(Id Card with front side and Back side)
+                  <input type="hidden" name="upload1" id="upload1" value="" >
+                  <p style="color:blue" id="upload1text"></p>
+                  <p style="color: blue" id="af1"></p>
+               </div>
+               <div class="col-md-4 ">
+                  <a class="idcard_view" target="_blank" href="">  <img src="" style="height:100px;width: 150px;" id="idcard_view" name="idcard_view"></a>
+                  <a class="idcard_view" target="_blank" href="">Click here to view </a>
+               </div>
+               <div class="col-md-2 ">
+                  <label for="aadh_up"><b>Photo Upload</b><span style="color:red;"> *</span></label>
+                  <br>
+                  <button  id="ideator_photo_file1"   TextboxId="Photo"  title="Add Mark" type="button"    data-toggle="modal" data-target="#file_up_modal"class="btn-shadow mr-3 btn btn-warning ideator_photo_file1 file_up_modal">
+                  <i class="fa fa-upload"></i>
+                  </button> (Max-size: 2 MB)
+                  <input type="hidden" name="upload2" id="upload2" value="" >
+                  <p style="color:blue" id="upload2text"></p>
+               </div>
+               <div class="col-md-4">
+                  <a target="_blank" href="">  <img src="" style="height:100px;width: 150px;" class="photo_view" id="photo_view" name="photo_view"></a>
+                  <a target="_blank" class="photo_view" href="">Click here to view </a>
+               </div>
+            </div>
+            <br>
+            <div class="form-row">
+               <div class=" col-md-12">
+                  <div class="alert alert-danger fade show" role="alert">
+                     <i class="fa fa-question-circle"></i>
+                     The Bank Details are currently Not Mandatory, but need to be filled up once shortlisted for the District Level Evaluation.  
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12" >
+                  <div class="main-card mb-3 card " >
+                     <div class="card-header alert alert-secondary"><i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Bank Details
+                     </div>
+                     <div class="card-body">
+                        <div class="tab-content">
+                           <div class="tab-pane active" id="tab-eg1-0" role="tabpanel">
+                              <div class="form-row" style="border: 1 solid red">
+                                 <div class="col-md-6 mb-3">
+                                    <label for="name" class="control-label ">
+                                       <b>Bank A/C No.</b>
+                                       <p style="color:blue">(The Account number must be 18 digit, if not make it 18 digits by prefixing zeros.)
+                                       </p>
+                                       <u style="color:blue">Example : </u><i> Account number-123456789&nbsp;&nbsp;&
+                                       Required Format - 000000000123456789</i>
+                                    </label>
+                                    <input type="text" class="form-control" id="bank_acno" value="" name="bank_acno" placeholder="Bank A/C No." >
+                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                    <label for="name" class="control-label "><b>Repeat Bank A/C No.</b></label><br><br><br>
+                                    <p></p>
+                                    <input type="text" class="form-control" id="repeat_bank_acno" value="" name="repeat_bank_acno" placeholder="Repeat Bank A/C No." >
+                                 </div>
+                              </div>
+                              <div class="form-row">
+                                 <div class="col-md-3 mb-3">
+                                    <label for="name" class="control-label "><b>Bank Name</b></label>
+                                 </div>
+                                 <div class="col-md-3 mb-3">
+                                    <label for="aadhaar"><b>IFSC code</b></label>
+                                    <input type="text" class="form-control bank_ifsc" id="bank_ifsc" value="" name="bank_ifsc" placeholder="IFSC code" >
+                                 </div>
+                                 <div class="col-md-3 mb-3">
+                                    <label for="name" class="control-label "><b>Branch Name</b></label>
+                                    <input type="text" class="form-control bank_branchname" value=""   placeholder="Branch Name" disabled>
+                                    <input type="hidden" class="form-control bank_branchname" id="bank_branchname" value="" name="bank_branchname" placeholder="Branch Name">
+                                 </div>
+                                 <div class="col-md-3 mb-3">
+                                    <label for="name" class="control-label "><b>District</b></label>
+                                    <input type="text" class="form-control branch_dist" value=""  placeholder="Branch Name" disabled>
+                                    <input type="hidden" class="form-control branch_dist" id="branch_dist" value="" name="branch_dist" placeholder="Branch Name">
+                                 </div>
+                              </div>
+                              <div class="form-row">
+                                 <div class="col-md-4 mb-3">
+                                    <label for="name" class="control-label "><b>Bank Address</b></label>
+                                    <textarea rows="3" disabled class="form-control branch_addr "></textarea>
+                                    <textarea name="branch_addr" id="branch_addr"  rows="3"  class="form-control branch_addr "></textarea>
+                                 </div>
+                                 <div class="col-md-2 ">
+                                    <label for="aadh_up"><b>Bank Proof Upload</b></label>
+                                    <br><br> 
+                                    <button  id="ideator_proof_file1"   TextboxId="Proof"  title="Add Mark" type="button"    data-toggle="modal" data-target="#file_up_modal"class="btn-shadow mr-3 btn btn-warning ideator_proof_file1 file_up_modal">
+                                    <i class="fa fa-upload"></i>
+                                    </button> <br>(Max-size: 2 MB)
+                                    <label>( Cancelled Cheque or front page of the passbook )</label>
+                                    <input type="hidden" name="upload3" id="upload3" value="" >
+                                    <p style="color:blue" id="upload3text"></p>
+                                 </div>
+                                 <div class="col-md-4 mb-3">
+                                    <label for="name" class="control-label "><br></label>
+                                    <br>
+                                    <a target="_blank" href="">  <img src="" style="height:100px;width: 150px;" class="photo_view" id="proof_view" name="proof_view"></a>
+                                    <a target="_blank" class="proof_view" href="">Click here to view </a>
+                                 </div>
+                              </div>
+      
+            
+                              <p style="color:blue">* The registered Name and the Name in the identity card should be the same as the name printed on the Cancelled Cheque Leaf or Front Page of the Passbook.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-10 offset-sm-2">
+               <input type="hidden" name="btnval" id="btnval">
+               <input type="hidden" name="newideatrid" value='' id="newideatrid">
+               <input type="hidden" name="formname" value="frmRankDetails">
+               <div style="float:right" class="btngrp">
+                  <!-- <p style="color:red">* Click "Save Draft" to enable Submit Button</p> -->
+                  <button  class="btn btn-primary submitbutton" id="savedetails" value="1"> Save draft</button>
+                  <!-- <button disabled class="btn btn-primary" id="" > Submit </button> -->
+                  <button  class="btn btn-primary submitbutton" id="submitdetails" value="2"> Submit </button>
+                  <button  class="btn btn-danger"  onclick="" id="cancel">Cancel</button>
+               </div>
+      </div>      
+      </div>
+      </div>
+      <div>
+      </div>
+  
+	
+	
+	
+	
+	
+</body>
+
+</html>
